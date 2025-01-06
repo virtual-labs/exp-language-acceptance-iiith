@@ -95,7 +95,10 @@ function addToStack(str) {
 function removeFromStack(){
   stack = document.getElementById("stack_list");
   if(stack.firstChild){
-    stack.removeChild(stack.lastChild);
+    stack.removeChild(stack.firstChild);
+    if(stack.firstChild){
+      stack.firstChild.style.fontWeight = "bold";
+    }
   }
 }
 
@@ -152,6 +155,7 @@ window.addEventListener('load', function(e){
       }
       if(inputPointer==0){
         str += "Moved to Start State";
+
       }
       addToStack(str);
 
