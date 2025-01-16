@@ -90,7 +90,7 @@ Another equivalent way is as follows.
 
 ### NFAs vs DFAs
 
-A natural question that arises is -- are there languages that are accepted by NFAs but not by DFAs?
+A natural question that arises is -- are there languages that are accepted by NFAs but not by DFAs? We shall [soon](https://virtual-labs.github.io/exp-nfa-to-dfa-iiith/) see that every language that is accepted by a NFA can also be accepted by a DFA (with a larger number of states).
 
 ### Regular languages
 
