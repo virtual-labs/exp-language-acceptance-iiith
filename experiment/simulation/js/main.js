@@ -23,21 +23,17 @@ function refreshCanvas(){
 
   curr = ""
   if(inputPointer != -1){
-    // console.log("before", inputPointer, curr);
-    // console.log(nfa[nfaIndex]["input"]);
     if(path_state == "acc"){
       curr = nfa[nfaIndex]["input"][inputIndex]["states"][inputPointer];
     }else{
       curr = nfa[nfaIndex]["input"][inputIndex]["reject_path"][inputPointer];
     }
-    // console.log("after", inputPointer, curr);
   }
 
   NFADescriptionContainer = document.getElementById("NFA_description_container");
   clearElem(NFADescriptionContainer);
-  span = newElement("font", [["id", "NFA_description"], ["color", "brown"],["size","5.5"]]);
+  span = newElement("font", [["id", "NFA_description"], ["color", "brown"],["size","5"]]);
   text = document.createTextNode(nfa[nfaIndex]["description"]);
-  // Make the description bold
   NFADescriptionContainer.appendChild(span);
   span.appendChild(text);
 
@@ -75,14 +71,7 @@ function resetStack(){
   clearElem(stack);
 }
 
-// function addToStack(str){
-//   stack = document.getElementById("stack_list");
-//   listElem = newElement("li", []);
-//   textNode = document.createTextNode(str);
-//   listElem.appendChild(textNode)
-//   stack.appendChild(listElem);
 
-// }
 
 function addToStack(str) {
   stack = document.getElementById("stack_list");
@@ -106,7 +95,10 @@ function addToStack(str) {
 function removeFromStack(){
   stack = document.getElementById("stack_list");
   if(stack.firstChild){
-    stack.removeChild(stack.lastChild);
+    stack.removeChild(stack.firstChild);
+    if(stack.firstChild){
+      stack.firstChild.style.fontWeight = "bold";
+    }
   }
 }
 
@@ -163,6 +155,7 @@ window.addEventListener('load', function(e){
       }
       if(inputPointer==0){
         str += "Moved to Start State";
+
       }
       addToStack(str);
 
