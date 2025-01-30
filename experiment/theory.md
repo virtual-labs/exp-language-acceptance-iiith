@@ -28,8 +28,8 @@ In other words, in a non-deterministic finite state machine, at any point there 
 #### Example 1
 Now let us look at an example of a Non-deterministic Finite State Automaton.
 
-<img src="image.jpg" alt="Description" width="300">
-![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample1.png)
+<img src="images/NFAexample1.png" alt="Non-deterministic Finite State Automaton that accepts strings with 101" width="700">
+<!-- ![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample1.png) -->
 
 Using the above definition, we can express the automaton in the figure above as follows. $ N= (Q, \Sigma, \delta, q_0, F) $ where
 - $ Q = (q_1, q_2, q_3, q_4) $
@@ -51,7 +51,7 @@ Note that the afore mentioned automaton does not have transitions for letter $ 1
 
 Suppose we are running the NFA on a given string and we reach a state where we have multiple possibilities to proceed. For example, from state $ q_1 $, we have two possibilities, either stay put at $ q_1 $ or transition to $ q_2 $. At this point machine splits into two copies and then explores all possibilities in parallel. Each copy of the machine takes one of the possibilities and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol does not appear on an arrow from the current state in the state diagram (equivalently, if the corresponding cell in the transition table is empty), that copy of the machine dies, along with the branch of computation leading up to it. If any of the copies of the machine is an accept state at the end of the input, the NFA accepts the string.
 
-<img src="images/NFApossibilities.png" alt="Possibilities arising from non-determinism" width="300">
+<img src="images/NFApossibilities.png" alt="Possibilities arising from non-determinism" width="700">
 <!-- ![Possibilities arising from non-determinism](images/NFApossibilities.png) -->
 
 
@@ -65,7 +65,7 @@ In non-deterministic finite state automata, we can have transition arrows labele
 
 ### Example 2
 
-<img src="images/NFAexample2.png" alt="Non-deterministic Finite State Automaton that accepts strings with 101" width="300">
+<img src="images/NFAexample2.png" alt="Non-deterministic Finite State Automaton that accepts strings with 101" width="700">
 <!-- ![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample2.png) -->
 
 Formally we get the following. $ N_2= (Q, \Sigma, \delta, q_0, F) $ where
@@ -85,12 +85,12 @@ Formally we get the following. $ N_2= (Q, \Sigma, \delta, q_0, F) $ where
 
 An equivalent NFA that accepts the same set of strings as the NFA in example 2 is as follows.
 
-<img src="images/NFAexample2a.png" alt="Equivalent NFA to NFA in example 2" width="300">
+<img src="images/NFAexample2a.png" alt="Equivalent NFA to NFA in example 2" width="700">
 <!-- ![Equivalent NFA to NFA in example 2](images/NFAexample2a.png) -->
 
 Another equivalent way is as follows.
 
-<img src="images/NFAexample2b.png" alt="Another equivalent NFA to NFA in example 2" width="300">
+<img src="images/NFAexample2b.png" alt="Another equivalent NFA to NFA in example 2" width="700">
 <!-- ![Another equivalent NFA to NFA in example 2](images/NFAexample2b.png) -->
 
 ### NFAs vs DFAs
