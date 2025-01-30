@@ -1,10 +1,10 @@
-### Prerequisites
+#### Prerequisites
 
 Before we start with this experiment, we recommend the reader gain an understanding of [Determininistic Finite Automata (DFA)](https://virtual-labs.github.io/exp-determinstic-finite-automaton-iiith/). 
 
 <!-- A non-deterministic finite automaton (NFA) is an abstraction of a memory-less machine with transitions that need not be unique. A NFA either accepts or rejects a string by running through a sequence of states that are non-deterministically chosen upon reading the sequence of symbols in the given string. A language of a NFA is the set of all strings that are accepted by it. --->
 
-## Non-deterministic Finite State Automata
+### Non-deterministic Finite State Automata
 Let us recall the following definitions.
 
 A *Deterministic Finite State Machine* (FSM) is a $ 5 $-tuple $ (Q, \Sigma, \delta, q_0, F) $ where
@@ -25,9 +25,10 @@ A *Non-Deterministic Finite State Machine* (FSM) is a $ 5 $-tuple $ (Q, \Sigma, 
 
 In other words, in a non-deterministic finite state machine, at any point there may exist several choices for the next state. Non-determinism can be viewed as a generalization of determinism and thus every deterministic finite automaton is a non-deterministic finite automaton.
 
-### Example 1
+#### Example 1
 Now let us look at an example of a Non-deterministic Finite State Automaton.
 
+<img src="image.jpg" alt="Description" width="300">
 ![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample1.png)
 
 Using the above definition, we can express the automaton in the figure above as follows. $ N= (Q, \Sigma, \delta, q_0, F) $ where
@@ -50,7 +51,8 @@ Note that the afore mentioned automaton does not have transitions for letter $ 1
 
 Suppose we are running the NFA on a given string and we reach a state where we have multiple possibilities to proceed. For example, from state $ q_1 $, we have two possibilities, either stay put at $ q_1 $ or transition to $ q_2 $. At this point machine splits into two copies and then explores all possibilities in parallel. Each copy of the machine takes one of the possibilities and continues as before. If there are subsequent choices, the machine splits again. If the next input symbol does not appear on an arrow from the current state in the state diagram (equivalently, if the corresponding cell in the transition table is empty), that copy of the machine dies, along with the branch of computation leading up to it. If any of the copies of the machine is an accept state at the end of the input, the NFA accepts the string.
 
-![Possibilities arising from non-determinism](images/NFApossibilities.png)
+<img src="images/NFApossibilities.png" alt="Possibilities arising from non-determinism" width="300">
+<!-- ![Possibilities arising from non-determinism](images/NFApossibilities.png) -->
 
 
 Abstractly, non-determinism is parallel computation where several copies of the machine could be running concurrently. Simply put, if any of the sequences of possibilities lead us to an accept state at the end of the input, the machine accepts the string.
@@ -63,7 +65,8 @@ In non-deterministic finite state automata, we can have transition arrows labele
 
 ### Example 2
 
-![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample2.png)
+<img src="images/NFAexample2.png" alt="Non-deterministic Finite State Automaton that accepts strings with 101" width="300">
+<!-- ![Non-deterministic Finite State Automaton that accepts strings with 101](images/NFAexample2.png) -->
 
 Formally we get the following. $ N_2= (Q, \Sigma, \delta, q_0, F) $ where
 - $ Q = (q_1, q_2, q_3, q_4) $
@@ -82,11 +85,13 @@ Formally we get the following. $ N_2= (Q, \Sigma, \delta, q_0, F) $ where
 
 An equivalent NFA that accepts the same set of strings as the NFA in example 2 is as follows.
 
-![Equivalent NFA to NFA in example 2](images/NFAexample2a.png)
+<img src="images/NFAexample2a.png" alt="Equivalent NFA to NFA in example 2" width="300">
+<!-- ![Equivalent NFA to NFA in example 2](images/NFAexample2a.png) -->
 
 Another equivalent way is as follows.
 
-![Anothe equivalent NFA to NFA in example 2](images/NFAexample2b.png)
+<img src="images/NFAexample2b.png" alt="Another equivalent NFA to NFA in example 2" width="300">
+<!-- ![Another equivalent NFA to NFA in example 2](images/NFAexample2b.png) -->
 
 ### NFAs vs DFAs
 
@@ -96,9 +101,9 @@ A natural question that arises is -- are there languages that are accepted by NF
 
 A language $ L $ is called a *regular language* if some Finite State Machine *recognizes* it. We shall discuss more about regular languages and regular expressions in the [next experiment](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/).
 
-## Related topics
-1. [Language acceptance by Deterministic Finite Automata](https://virtual-labs.github.io/exp-determinstic-finite-automaton-iiith/)
-2. [Converting a NFA to a DFA](https://virtual-labs.github.io/exp-nfa-to-dfa-iiith/)
-3. [Converting a Regular Expression to NFA](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/)
+<!-- ## Related topics -->
+<!-- 1. [Language acceptance by Deterministic Finite Automata](https://virtual-labs.github.io/exp-determinstic-finite-automaton-iiith/) -->
+<!-- 2. [Converting a NFA to a DFA](https://virtual-labs.github.io/exp-nfa-to-dfa-iiith/) -->
+<!-- 3. [Converting a Regular Expression to NFA](https://virtual-labs.github.io/exp-converting-regular-expression-iiith/) -->
 
 
